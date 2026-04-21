@@ -115,7 +115,7 @@ export default function HowItWorks() {
 
         <div className="mt-16 text-center">
           <a
-            href="#register"
+            href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
             className="inline-block text-sm font-semibold text-white bg-[#2DD4AA] px-8 py-3.5 rounded-full hover:bg-[#1A9E80] transition-all duration-200"
           >
             Start Now

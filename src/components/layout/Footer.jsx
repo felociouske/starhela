@@ -20,7 +20,7 @@ const footerLinks = {
   ],
   Support: [
     { label: "Contact Us", href: "#contact" },
-    { label: "WhatsApp", href: "https://wa.me/254707569122" },
+    { label: "WhatsApp", href: "https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+" },
     { label: "Blog", href: "#blog" },
     { label: "Team", href: "#team" },
   ],
@@ -48,7 +48,7 @@ export default function Footer() {
               your smartphone by chatting with lonely foreigners abroad.
             </p>
             <a
-              href="https://wa.me/254707569122"
+              href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 text-sm font-medium text-[#25D366] hover:text-green-400 transition-colors w-fit"

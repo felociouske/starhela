@@ -17,7 +17,7 @@ const services = [
     id: 2,
     title: "Academic Writing",
     description:
-      "Access professional academic writing services. Essays, research papers, dissertations and more — delivered on time with quality guaranteed.",
+      "Access professional academic writing services. Essays, research papers, dissertations and more delivered on time with quality guaranteed.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20h9" />
@@ -137,7 +137,7 @@ export default function Services() {
           </h2>
           <p className="text-text-secondary text-base max-w-2xl mx-auto leading-relaxed">
             Starhela is more than a chatting platform. We offer a full suite
-            of income-generating and skill-building services — all accessible
+            of income-generating and skill-building services all accessible
             from your smartphone or laptop.
           </p>
           <div className="mt-6 w-12 h-1 bg-[#6C3FC5] rounded-full mx-auto" />
@@ -214,7 +214,7 @@ export default function Services() {
             All services accessible with a single activation. No monthly fees.
           </p>
           <a
-            href="#register"
+            href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
             className="inline-block text-sm font-semibold text-white bg-[#6C3FC5] px-8 py-3.5 rounded-full hover:bg-[#4C2E8A] transition-all duration-200"
           >
             Get Full Access Now

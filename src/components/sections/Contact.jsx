@@ -38,7 +38,7 @@ export default function Contact() {
                 },
                 {
                   label: "Email Address",
-                  value: "support@starhela.com",
+                  value: "support@starhela.cc",
                   href: "mailto:support@starhela.com",
                   icon: (
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -81,7 +81,7 @@ export default function Contact() {
                 Register now and activate your account in minutes.
               </p>
               <a
-                href="#register"
+                href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
                 className="inline-block text-center text-sm font-semibold text-white bg-[#6C3FC5] px-6 py-3 rounded-full hover:bg-[#4C2E8A] transition-all duration-200 mt-2 w-fit"
               >
                 Register Now

@@ -74,7 +74,7 @@ export default function About() {
             <p className="text-text-secondary text-base leading-relaxed">
               Beyond chatting, we offer forex trading bots, smart betting
               insights, academic writing services, social media growth tools,
-              and valuable e-books — all under one roof with a single
+              and valuable e-books all under one roof with a single
               one-time activation.
             </p>
 
@@ -120,7 +120,7 @@ export default function About() {
               <p className="text-white text-base leading-relaxed">
                 To create accessible daily income opportunities for every
                 African through technology, conversation, and digital skills
-                — all from the palm of your hand.
+                all from the palm of your hand.
               </p>
               <div className="w-10 h-0.5 bg-[#2DD4AA] rounded-full" />
               <p className="text-gray-400 text-sm">

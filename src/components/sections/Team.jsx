@@ -15,14 +15,14 @@ const team = [
   },
   {
     name: "Chanda Mwale",
-    role: "Country Lead — Zambia",
+    role: "Country Lead - Zambia",
     description: "Manages Zambia operations and supports Zambian members through onboarding and growth.",
     initials: "CM",
     color: "#3B82F6",
   },
   {
     name: "Kofi Asante",
-    role: "Country Lead — Ghana",
+    role: "Country Lead - Ghana",
     description: "Leads the Ghana chapter and ensures seamless MTN and Vodafone payment processing.",
     initials: "KA",
     color: "#F59E0B",

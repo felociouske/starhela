@@ -178,7 +178,7 @@ export default function Summaries() {
                 </div>
               </div>
               <a
-                href="#register"
+                href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
                 className="hidden sm:block text-sm font-semibold text-white bg-[#6C3FC5] px-6 py-3 rounded-full hover:bg-[#4C2E8A] transition-all duration-200 shrink-0"
               >
                 Join Now
@@ -241,7 +241,7 @@ export default function Summaries() {
 
             {/* Mobile Join Button */}
             <a
-              href="#register"
+              href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
               className="sm:hidden text-center text-sm font-semibold text-white bg-[#6C3FC5] py-3.5 rounded-full hover:bg-[#4C2E8A] transition-all duration-200"
             >
               Join {selected.name} Now
