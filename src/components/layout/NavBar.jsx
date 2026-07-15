@@ -29,12 +29,12 @@ export default function Navbar() {
           <span>
             Call / WhatsApp{" "}
             <a
-              href="https://wa.me/254707569122"
+              href="https://wa.me/254750518501"
               className="font-semibold underline hover:text-accent-light transition-colors"
               target="_blank"
               rel="noreferrer"
             >
-              +254 707 569 122
+              +254750518501
             </a>{" "}
             for quick support
           </span>
@@ -79,13 +79,13 @@ export default function Navbar() {
             {/* Desktop Auth Buttons */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href="https://www.nexcribe.com/ref/NX-SKFV5T"
+                href="https://wa.me/254750518501"
                 className="text-sm font-semibold text-[#6C3FC5] border border-[#6C3FC5] px-5 py-2 rounded-full hover:bg-[#6C3FC5] hover:text-white transition-all duration-200"
               >
                 Login
               </a>
               <a
-                href="https://www.nexcribe.com/ref/NX-SKFV5T"
+                href="https://wa.me/254750518501"
                 className="text-sm font-semibold text-white bg-[#2DD4AA] px-5 py-2 rounded-full hover:bg-[#1A9E80] transition-all duration-200"
               >
                 Register
@@ -137,13 +137,13 @@ export default function Navbar() {
 
             <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
                 <a
-                href="https://www.nexcribe.com/ref/NX-SKFV5T"
+                href="https://wa.me/254750518501"
                 className="text-center text-sm font-semibold text-[#6C3FC5] border border-[#6C3FC5] px-5 py-2.5 rounded-full hover:bg-[#6C3FC5] hover:text-white transition-all duration-200"
               >
                 Login
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+nexcribe+"
+                href="https://api.whatsapp.com/send?phone=254750518501&text=Hi+Sree+Am+interested+in+nexcribe+"
                 className="text-center text-sm font-semibold text-white bg-[#2DD4AA] px-5 py-2.5 rounded-full hover:bg-[#1A9E80] transition-all duration-200"
               >
                 Register

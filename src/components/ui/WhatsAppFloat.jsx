@@ -6,7 +6,7 @@ export default function WhatsAppFloat() {
   const [dismissed, setDismissed] = useState(false);
 
   const waLink =
-    "https://api.whatsapp.com/send?phone=254707569122&text=Hi%2C+I%27m+interested+in+joining+Starhela.+Can+you+help+me+get+started%3F";
+    "https://api.whatsapp.com/send?phone=254750518501&text=Hi%2C+I%27m+interested+in+joining+Starhela.+Can+you+help+me+get+started%3F";
 
   // Show bubble automatically 2 seconds after page load
   useEffect(() => {
