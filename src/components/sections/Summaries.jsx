@@ -1,26 +1,27 @@
 import { useState } from "react";
-import { countries, foreigners } from "../../data/countries";
+import { Link } from "react-router-dom";
+import { countries } from "../../data/countries";
 
-const requirements = [
-  "One-time activation fee (paid once)",
-  "Smartphone or Laptop",
-  "Valid email address",
-  "Mobile money number (network varies by country)",
-  "Unique username and password",
+const steps = [
+  "Create a free account",
+  "Choose your country to set your local currency",
+  "Deposit using your local payment method",
+  "Browse verified profiles and start chatting",
 ];
 
 const countryFlags = {
-  kenya: "🇰🇪",
-  zambia: "🇿🇲",
-  uganda: "🇺🇬",
-  botswana: "🇧🇼",
-  ghana: "🇬🇭",
+  UG: "🇺🇬",
+  KE: "🇰🇪",
+  TZ: "🇹🇿",
+  NG: "🇳🇬",
+  GH: "🇬🇭",
+  OTHER: "🌍",
 };
 
 export default function Summaries() {
-  const [activeCountry, setActiveCountry] = useState(countries[0].id);
+  const [activeCountry, setActiveCountry] = useState(countries[0].code);
 
-  const selected = countries.find((c) => c.id === activeCountry);
+  const selected = countries.find((c) => c.code === activeCountry);
 
   return (
     <section id="summaries" className="py-20 bg-[#F8F7FF]">
@@ -32,11 +33,11 @@ export default function Summaries() {
             Country Breakdown
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            Earnings Summary by Country
+            Starhela in Your Country
           </h2>
           <p className="text-text-secondary text-base max-w-2xl mx-auto leading-relaxed">
-            Select your country to see the activation fee, daily earnings,
-            payment method, and everything you need to get started.
+            Select your country to see your local currency and how deposits work
+            where you are.
           </p>
           <div className="mt-6 w-12 h-1 bg-[#2DD4AA] rounded-full mx-auto" />
         </div>
@@ -45,15 +46,15 @@ export default function Summaries() {
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {countries.map((country) => (
             <button
-              key={country.id}
-              onClick={() => setActiveCountry(country.id)}
+              key={country.code}
+              onClick={() => setActiveCountry(country.code)}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border transition-all duration-200 ${
-                activeCountry === country.id
+                activeCountry === country.code
                   ? "bg-[#6C3FC5] text-white border-[#6C3FC5] shadow-md shadow-[#6C3FC5]/20"
                   : "bg-white text-text-secondary border-gray-200 hover:border-[#6C3FC5] hover:text-[#6C3FC5]"
               }`}
             >
-              <span className="text-base">{countryFlags[country.id]}</span>
+              <span className="text-base">{countryFlags[country.code]}</span>
               {country.name}
             </button>
           ))}
@@ -62,10 +63,8 @@ export default function Summaries() {
         {/* Content Panel */}
         <div className="grid lg:grid-cols-3 gap-8">
 
-          {/* Left — Earnings & Fee Cards */}
+          {/* Left — Currency Card */}
           <div className="lg:col-span-1 flex flex-col gap-4">
-
-            {/* Activation Fee */}
             <div className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-2">
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-8 h-8 rounded-lg bg-[#6C3FC5]/10 flex items-center justify-center">
@@ -84,48 +83,15 @@ export default function Summaries() {
                   </svg>
                 </div>
                 <span className="text-xs font-semibold text-text-muted uppercase tracking-widest">
-                  Activation Fee
+                  Local Currency
                 </span>
               </div>
-              <p className="text-3xl font-bold text-[#6C3FC5]">
-                {selected.activationFee}
-              </p>
+              <p className="text-3xl font-bold text-[#6C3FC5]">{selected.currency}</p>
               <p className="text-text-secondary text-sm">
-                Paid once. No monthly charges.
+                Your wallet and profile rates display in this currency.
               </p>
             </div>
 
-            {/* Daily Earnings */}
-            <div className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-2">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-8 h-8 rounded-lg bg-[#2DD4AA]/10 flex items-center justify-center">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#2DD4AA"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
-                    <polyline points="16 7 22 7 22 13" />
-                  </svg>
-                </div>
-                <span className="text-xs font-semibold text-text-muted uppercase tracking-widest">
-                  Daily Earnings
-                </span>
-              </div>
-              <p className="text-3xl font-bold text-[#2DD4AA]">
-                {selected.dailyEarnings}
-              </p>
-              <p className="text-text-secondary text-sm">
-                Paid directly to your mobile line.
-              </p>
-            </div>
-
-            {/* Payment Method */}
             <div className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-2">
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
@@ -144,19 +110,18 @@ export default function Summaries() {
                   </svg>
                 </div>
                 <span className="text-xs font-semibold text-text-muted uppercase tracking-widest">
-                  Payment Method
+                  Deposits
                 </span>
               </div>
-              <p className="text-lg font-bold text-text-primary">
-                {selected.paymentMethod}
-              </p>
+              <p className="text-lg font-bold text-text-primary">Manual, local methods</p>
               <p className="text-text-secondary text-sm">
-                Network: {selected.network}
+                Mobile money instructions specific to {selected.name} are shown after
+                you sign up.
               </p>
             </div>
           </div>
 
-          {/* Right — Requirements + Foreigners */}
+          {/* Right — Banner + Steps */}
           <div className="lg:col-span-2 flex flex-col gap-6">
 
             {/* Country Banner */}
@@ -166,86 +131,45 @@ export default function Summaries() {
                   You are viewing
                 </p>
                 <div className="flex items-center gap-3">
-                  <span className="text-4xl">{countryFlags[selected.id]}</span>
+                  <span className="text-4xl">{countryFlags[selected.code]}</span>
                   <div>
-                    <h3 className="text-white text-2xl font-bold">
-                      {selected.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm">
-                      Currency: {selected.currency}
-                    </p>
+                    <h3 className="text-white text-2xl font-bold">{selected.name}</h3>
+                    <p className="text-gray-400 text-sm">Currency: {selected.currency}</p>
                   </div>
                 </div>
               </div>
-              <a
-                href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
+              <Link
+                to="/register"
                 className="hidden sm:block text-sm font-semibold text-white bg-[#6C3FC5] px-6 py-3 rounded-full hover:bg-[#4C2E8A] transition-all duration-200 shrink-0"
               >
-                Join Now
-              </a>
+                Create Account
+              </Link>
             </div>
 
-            {/* Requirements */}
+            {/* Steps */}
             <div className="bg-white border border-gray-100 rounded-2xl p-6">
               <h4 className="text-text-primary font-semibold text-base mb-4">
-                Requirements to Join
+                How It Works
               </h4>
               <div className="flex flex-col gap-3">
-                {requirements.map((req, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#2DD4AA]/15 flex items-center justify-center shrink-0 mt-0.5">
-                      <svg
-                        width="10"
-                        height="10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#2DD4AA"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
+                {steps.map((step, index) => (
+                  <div key={step} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#2DD4AA]/15 flex items-center justify-center shrink-0 mt-0.5 text-[10px] font-bold text-[#2DD4AA]">
+                      {index + 1}
                     </div>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {req}
-                    </p>
+                    <p className="text-text-secondary text-sm leading-relaxed">{step}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Chat With Foreigners From */}
-            <div className="bg-white border border-gray-100 rounded-2xl p-6">
-              <h4 className="text-text-primary font-semibold text-base mb-4">
-                Chat with Lonely Foreigners From
-              </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {foreigners.map((f) => (
-                  <div
-                    key={f.country}
-                    className="flex items-center gap-2 bg-[#F8F7FF] border border-gray-100 rounded-xl px-3 py-2.5"
-                  >
-                    <img
-                      src={`https://flagcdn.com/w40/${f.code.toLowerCase()}.png`}
-                      alt={f.country}
-                      className="w-6 h-4 object-cover rounded-sm"
-                    />
-                    <span className="text-text-secondary text-xs font-medium">
-                      {f.country}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile Join Button */}
-            <a
-              href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
+            {/* Mobile CTA */}
+            <Link
+              to="/register"
               className="sm:hidden text-center text-sm font-semibold text-white bg-[#6C3FC5] py-3.5 rounded-full hover:bg-[#4C2E8A] transition-all duration-200"
             >
               Join {selected.name} Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
