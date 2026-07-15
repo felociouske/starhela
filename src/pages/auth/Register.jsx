@@ -127,7 +127,7 @@ export default function Register() {
 
           <div>
             <label className="block text-sm font-medium text-[#1A1A2E] mb-1">Account type</label>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3">
               <button
                 type="button"
                 onClick={() => setForm({ ...form, role: "client" })}
@@ -138,17 +138,6 @@ export default function Register() {
                 }`}
               >
                 I want to chat
-              </button>
-              <button
-                type="button"
-                onClick={() => setForm({ ...form, role: "provider" })}
-                className={`rounded-lg border px-3 py-2 text-sm font-medium ${
-                  form.role === "provider"
-                    ? "border-[#4338CA] bg-[#4338CA]/5 text-[#4338CA]"
-                    : "border-[#DAD8ED] text-[#6B6B85]"
-                }`}
-              >
-                I want to earn
               </button>
             </div>
           </div>

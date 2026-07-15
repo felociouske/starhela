@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -135,18 +136,18 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-2">
-            <a
-              href="https://wa.me/254750518501"
+            <Link
+              to="/register/"
               className="text-sm font-semibold text-white bg-[#2DD4AA] px-8 py-3.5 rounded-full hover:bg-[#1A9E80] transition-all duration-200 shadow-lg shadow-[#2DD4AA]/20"
             >
               Register Now
-            </a>
-            <a
-              href="https://wa.me/254750518501"
+            </Link>
+            <Link
+              to="/login/"
               className="text-sm font-semibold text-white border border-white/30 px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-200"
             >
               Login
-            </a>
+            </Link>
           </div>
 
           {/* Trust Line */}
@@ -206,13 +207,13 @@ export default function Hero() {
                 ))}
               </div>
             </div>
-                <a
+                <Link
             
-              href="https://wa.me/254750518501"
+              to="/register/"
               className="text-center text-sm font-semibold text-white bg-[#6C3FC5] py-3 rounded-full hover:bg-[#4C2E8A] transition-all duration-200"
             >
               Get Started Today
-            </a>
+            </Link>
           </div>
         </div>
       </div>

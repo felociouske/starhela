@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -78,18 +79,18 @@ export default function Navbar() {
 
             {/* Desktop Auth Buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <a
-                href="https://wa.me/254750518501"
+              <Link
+                to="/login/"
                 className="text-sm font-semibold text-[#6C3FC5] border border-[#6C3FC5] px-5 py-2 rounded-full hover:bg-[#6C3FC5] hover:text-white transition-all duration-200"
               >
                 Login
-              </a>
-              <a
-                href="https://wa.me/254750518501"
+              </Link>
+              <Link
+                to="/register/"
                 className="text-sm font-semibold text-white bg-[#2DD4AA] px-5 py-2 rounded-full hover:bg-[#1A9E80] transition-all duration-200"
               >
                 Register
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -136,18 +137,18 @@ export default function Navbar() {
             ))}
 
             <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-gray-100">
-                <a
-                href="https://wa.me/254750518501"
+                <Link
+                to="/login/"
                 className="text-center text-sm font-semibold text-[#6C3FC5] border border-[#6C3FC5] px-5 py-2.5 rounded-full hover:bg-[#6C3FC5] hover:text-white transition-all duration-200"
               >
                 Login
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=254750518501&text=Hi+Sree+Am+interested+in+nexcribe+"
+              </Link>
+              <Link
+                to="/register/"
                 className="text-center text-sm font-semibold text-white bg-[#2DD4AA] px-5 py-2.5 rounded-full hover:bg-[#1A9E80] transition-all duration-200"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </div>
         </div>
