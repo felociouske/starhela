@@ -71,7 +71,7 @@ export default function Login() {
 
         <p className="text-sm text-[#6B6B85] mt-6 text-center">
           Don't have an account?{" "}
-          <Link to="/register" className="text-[#4338CA] font-medium">
+          <Link to="/register/" className="text-[#4338CA] font-medium">
             Sign up
           </Link>
         </p>

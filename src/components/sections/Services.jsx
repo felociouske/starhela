@@ -214,7 +214,7 @@ export default function Services() {
             All services accessible with a single activation. No monthly fees.
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=254707569122&text=Hi+Sree+Am+interested+in+starhela+"
+            href="https://api.whatsapp.com/send?phone=254750518501&text=Hi+Sree+Am+interested+in+starhela+"
             className="inline-block text-sm font-semibold text-white bg-[#6C3FC5] px-8 py-3.5 rounded-full hover:bg-[#4C2E8A] transition-all duration-200"
           >
             Get Full Access Now
