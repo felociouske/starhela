@@ -136,18 +136,18 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-2">
-            <Link
-              to="/register/"
+            <a
+              href="https://app.mulaearn.co/register/"
               className="text-sm font-semibold text-white bg-[#2DD4AA] px-8 py-3.5 rounded-full hover:bg-[#1A9E80] transition-all duration-200 shadow-lg shadow-[#2DD4AA]/20"
             >
               Register Now
-            </Link>
-            <Link
-              to="/login/"
+            </a>
+            <a
+              href="https://app.mulaearn.co/register/"
               className="text-sm font-semibold text-white border border-white/30 px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-200"
             >
               Login
-            </Link>
+            </a>
           </div>
 
           {/* Trust Line */}
